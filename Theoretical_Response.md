@@ -21,7 +21,7 @@ Slow page loading can significantly impact the user's engagement by increasing t
 <ins>Explain two benefits of HTML and CSS in web development. Provide an example of how they work together to structure and style a webpage. (4 marks)</ins>
 \
 \
-HTML and CSS provide important benefits in web development by separating structure from style and ensuring consistent and responsive design across devices. HTML defines the content and layout of a webpage, such as headings, paragraphs, and images, while CSS controls the visual presentation, including colors, fonts, and positioning. This separation makes websites easier to maintain and update, while also allowing developers to apply uniform styling across multiple pages. For example, a webpage might use HTML to create a <div class="banner">Welcome</div> section, and CSS to style it with a navy background, white text, and centred alignment, showing how the two work together to structure and visually enhance the page
+HTML and CSS provide important benefits in web development by separating structure from style and ensuring consistent and responsive design across devices. HTML defines the content and layout of a webpage, such as headings, paragraphs, and images, while CSS controls the visual presentation, including colors, fonts, and positioning. This separation makes websites easier to maintain and update, while also allowing developers to apply uniform styling across multiple pages. For example, a webpage might use HTML to create a ```<div class="banner">Welcome</div>``` section, and CSS to style it with a navy background, white text, and centred alignment, showing how the two work together to structure and visually enhance the page
 \
 \
 **Question 4**\
@@ -74,3 +74,34 @@ A simple 3 equal width boxes:\
 <ins> Why is web accessibility important, and what are two best practices developers should follow to ensure their websites are accessible to all users? Provide examples for each best practice. (2) </ins>
 \
 \
+Web accessibility is important because it ensures that everyone, including those with disabilities, can access and use the web page. It promotes inclusivity and equal opportunity. Developers can promote inclusivity by semantic HTML, which helps assistive technologies such as screen readers to read the content correctly. For example, using a ```<button>``` instead of a ```<div>``` that is clickable ensures it is read out correctly by the assistive technologies. Another way is providing text alternatives for non-text content. This can be through ways like adding alternate attributes to images so people with visual disabilities can use assistive technologies to read what is on screen. ```<img src="logo.png" alt="Company logo">```  makes it so that the user understands what is on screen even if the image cannot be seen. Together, they make websites more usable for everyone.
+\
+\
+**Question 8**\
+<ins>Discuss the importance of cross browser compatibility (3) </ins>
+\
+\
+Cross-browser compatibility is important because it ensures that websites function consistently across different browsers, allowing all users to access content and features without disruption. If a site works well in Chrome but fails in Safari or Firefox, users may experience broken layouts or inaccessible functions, which can frustrate them and reduce engagement. On the positive side, compatibility broadens audience reach and builds trust, as users can rely on the site regardless of their chosen browser. On the negative side, failing to optimise for multiple browsers can damage credibility and exclude potential users. Therefore, by testing and optimising across platforms, developers can maintain usability, reliability, and inclusivity, which strengthens overall user experience and supports the success of the website.
+\
+\
+**Question 9**\
+<ins>Explain the use of &lt;canvas&gt; tag in HTML design? Give an example. (2)</ins>
+\
+\
+The ```<canvas>``` tag in HTML is an element that provides a space on a webpage where developers can create graphics using JavaScript. It acts like an empty, programmable drawing surface. Unlike images or standard HTML elements, ```<canvas>``` does not display anything by default. Instead, through the use of JavaScript, it is used to render shapes, animations, charts, games, or interactive visual content. This makes ```<canvas>``` useful when a webpage needs real-time graphics or custom visual output that cannot be achieved using HTML or CSS alone.
+```
+<canvas id="exampleCanvas" width="67" height="67"></canvas>
+<script>
+  const canvas = document.getElementById("exampleCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "blue";
+  ctx.fillRect(20, 20, 100, 100);   //blue square
+</script>
+```
+\
+\
+**Question 10**\
+<ins>Justify why the world wide web wasn’t ‘designed’ to be ‘secure’ when it first emerged in the 1980s. (5)</ins>
+\
+\
+The World Wide Web was not designed to be secure in the 1980s because its original purpose was to spread information in a trusted environment.Security threats were not a major concern. In the 1980s, the internet was used mainly by universities, government researchers, and scientific institutions. These groups operated in a cooperative, low-risk environment, so security features like encryption, authentication, and access control were not considered necessary. The priority was connectivity, simplicity and openness not protection. Furthermore, computing power and networking technology were limited at the time. Implementing strong security mechanisms would have made those computers slower and more expensive. Early web protocols such as HTTP were intentionally lightweight so information could be accessed quickly over slow networks. Finally, hacking, and large-scale attacks were not yet very common. Because the early internet community was small and trusted, developers did not anticipate the global expansion of the web or the security threats that would later arise. For example, HTTP originally transmitted all data, including passwords, in plain text because it was assumed that only trusted researchers would use the system. Only when the web expanded to the public in the 1990s did technologies like HTTPS and encryption become necessary.
