@@ -21,3 +21,56 @@ Slow page loading can significantly impact the user's engagement by increasing t
 <ins>Explain two benefits of HTML and CSS in web development. Provide an example of how they work together to structure and style a webpage. (4 marks)</ins>
 \
 \
+HTML and CSS provide important benefits in web development by separating structure from style and ensuring consistent and responsive design across devices. HTML defines the content and layout of a webpage, such as headings, paragraphs, and images, while CSS controls the visual presentation, including colors, fonts, and positioning. This separation makes websites easier to maintain and update, while also allowing developers to apply uniform styling across multiple pages. For example, a webpage might use HTML to create a <div class="banner">Welcome</div> section, and CSS to style it with a navy background, white text, and centred alignment, showing how the two work together to structure and visually enhance the page
+\
+\
+**Question 4**\
+<ins>Outline what is JavaScript and how it enhances the functionality of a webpage. Provide an example where JavaScript is used to validate user input on a web form. (2)</ins>
+\
+\
+JavaScript is a programming language used in web development to add interactivity and responsive behaviour to webpages, enhancing functionality beyond the rigid structure when just using HTML and CSS. It allows developers to respond to user actions, update content without reloading, and validate inputs to improve usability. For example, in a website where a user must enter an email address, JavaScript can check whether the input contains the “@” symbol before submission, displaying an alert if the format is incorrect. This ensures errors are caught early and improves the user experience.
+\
+\
+**Question 5**\
+<ins>Discuss the importance of optimising webpage load time for user experience. Provide three techniques to improve the loading speed of a website. (2)</ins>
+\
+\
+Optimising webpage load time is crucial because slow-loading sites frustrate users, increase the click off rates, and reduce engagement, while fast sites create smoother experiences that encourage visitors to stay longer and interact more with the website. Three effective techniques to improve loading speed include compressing images so it takes less time to process and render them, making CSS and JavaScript more efficient to reduce unnecessary code and speed up rendering, and using asynchronous programming to load intractables and other parts of the webpage in the background so it appears to be instantaneous when the user tries to open them. Together, these strategies ensure faster performance and a better user experience for users.
+\
+\
+**Question 6**\
+<ins>Explain how the CSS Flexbox layout works. Provide a simple example of how you would use Flexbox to create a row of three equal-width boxes that adapt to the screen size. You may include a diagram and annotation. (4)</ins>
+\
+\
+The CSS Flexbox layout works by turning a container into a flexible box (display: flex), which allows its child elements to align and distribute space evenly. Unlike traditional block or inline layouts, Flexbox can easily adjust the size, spacing, and alignment of items depending on the space available. This makes it good for creating responsive designs where elements adapt smoothly across devices. \
+A simple 3 equal width boxes:\
+*HTML*
+```
+<div class="container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+```
+*CSS*
+```
+.container {
+  display: flex;              /flexbox
+  justify-content: space-between; /spaces out boxes evenly
+}
+
+.box {
+  flex: 1;                    /boxes have equal width
+  margin: 5px;                /smol gap between the boxes
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+```
+
+\
+\
+**Question 7**\
+<ins> Why is web accessibility important, and what are two best practices developers should follow to ensure their websites are accessible to all users? Provide examples for each best practice. (2) </ins>
+\
+\
