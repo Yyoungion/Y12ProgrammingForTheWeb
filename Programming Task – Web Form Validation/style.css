@@ -1,0 +1,31 @@
+/* ...existing code... */
+body {
+  margin: 40px;
+  max-width: 500px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+/* override the generic input rule for checkboxes */
+input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fcc;
+}
