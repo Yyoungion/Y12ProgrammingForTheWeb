@@ -1,31 +1,32 @@
-/* ...existing code... */
+/*Styling for the body*/
 body {
-  margin: 40px;
-  max-width: 500px;
+  margin: 40px; /* add margin around the body */
+  max-width: 500px; /* limit the maximum width */
 }
 
+/* Styling for form elements (button) */
 input, button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  width: 100%; /* make inputs and buttons full width */
+  padding: 10px;  /* add padding inside */
+  margin: 10px 0; /* add margin above and below */
 }
 
-
-/* override the generic input rule for checkboxes */
+/* Styling for checkbox inputs */
 input[type="checkbox"] {
-  width: auto;
-  padding: 0;
-  margin: 0 10px 0 0;
-  vertical-align: middle;
+  width: auto; /* reset width for checkboxes */
+  padding: 0;/* reset padding for checkboxes */
+  margin: 0 10px 0 0; /* margin to the right only */
+  vertical-align: middle; /* align with text */
 }
 
+/* Styling for buttons */
 button {
-  background: #0078ff;
-  color: white;
-  border: none;
-  cursor: pointer;
+  background: #0078ff; /* blue background */
+  color: white; /* white text */
+  border: none; /* no border */
+  cursor: pointer; /* changes to pointer cursor on hover */
 }
 
 button:hover {
-  background: #005fcc;
+  background: #005fcc; /* darker blue on hover */
 }

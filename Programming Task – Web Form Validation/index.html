@@ -3,31 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up </title>
+  <!-- Link to stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Page heading -->
   <h2>Sign Up</h2>
 
+  <!-- Form with id "Login" — script.js uses this id to attach in script.js -->
   <form id="Login">
+    <!-- Name input: required attribute prevents submission if empty in supported browsers -->
     <label>Name:</label>
     <input type="text" id="name" required>
 
+    <!-- Email input: type="email" triggers browser email validation -->
     <label>Email:</label>
     <input type="email" id="email" required>
 
+    <!-- Date input for DOB -->
     <label>Date of Birth:</label>
     <input type="date" id="dob" required>
 
+    <!-- Password input -->
     <label>Password:</label>
     <input type="password" id="password" required>
 
-    <label>Confirm Password:</label>
-    <input type="password" id="confirmPassword" required>
+    <!-- Checkbox to toggle password visibility.
+         It calls togglePasswordVisibility() in script.js when clicked. -->
+    <label>Show Password</label>
+    <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
 
+    <!-- Submit button: type="submit triggers the submit event in script.js -->
     <button type="submit">Register</button>
   </form>
 
+  <!-- Include your JavaScript. script.js must exist and define togglePasswordVisibility()
+       and a submit handler for the form (using the form id "Login"). -->
   <script src="script.js"></script>
 </body>
 </html>
