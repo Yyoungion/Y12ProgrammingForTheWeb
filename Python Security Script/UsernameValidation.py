@@ -2,9 +2,11 @@
 
 def user_valid(username):
 
+    # Rule 1: Max length 10
     if len(username) > 10:
         return "Invalid: Username must be 10 characters or less."
 
+    # Rule 2: No Crocodiles
     if "<" in username or ">" in username:
         return "Invalid: Username cannot contain '<' or '>' characters."
 

@@ -1,32 +1,55 @@
-/*Styling for the body*/
+/* Center the whole page content (horizontally + vertically) and keep the form as a bordered card */
 body {
-  margin: 40px; /* add margin around the body */
-  max-width: 500px; /* limit the maximum width */
+  display: flex;
+  flex-direction: column;   /* stack children vertically (h2 heading above the form) */
+  align-items: center;      /* horizontally center all child elements */
+  justify-content: center;  /* vertically center all child elements */
+  gap: 16px;                /* add 16px space between the heading and the form */
+  min-height: 100vh;        /* make body at least full viewport height for vertical centering */
+  margin: 0;                /* remove default page margin */
+  background: lightblue;      /* light gray background color */
+  font-family: "Times New Roman", Times, serif;  /* serif font stack */
 }
 
-/* Styling for form elements (button) */
-input, button {
-  width: 100%; /* make inputs and buttons full width */
-  padding: 10px;  /* add padding inside */
-  margin: 10px 0; /* add margin above and below */
+/* Card-style form centered on the page */
+form#Login {
+  width: 100%;
+  max-width: 500px;         /* limit form width so it doesn't stretch too wide */
+  padding: 24px;            /* inner spacing inside the form */
+  border: 2px solid #d6dbe0; /* visible gray border around the form */
+  border-radius: 10px;      /* rounded corners for a softer card look */
+  background: #ffffff;      /* white background for the form card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);  /* subtle shadow for depth */
+  box-sizing: border-box;   /* include padding/border in width calculation */
+  text-align: left;         /* align labels and text to the left */
 }
 
-/* Styling for checkbox inputs */
+/* Make inputs and buttons full width inside the centered card */
+input:not([type="checkbox"]), button {
+  width: 100%;              /* stretch to fill the form width */
+  padding: 10px;            /* inner spacing for readability */
+  margin: 10px 0;           /* vertical spacing between controls */
+  box-sizing: border-box;   /* include padding in width calculation */
+}
+
+/* Keep checkboxes compact and inline with their label */
 input[type="checkbox"] {
-  width: auto; /* reset width for checkboxes */
-  padding: 0;/* reset padding for checkboxes */
-  margin: 0 10px 0 0; /* margin to the right only */
-  vertical-align: middle; /* align with text */
+  width: auto;              /* don't stretch checkbox to full width */
+  padding: 0;               /* remove extra padding */
+  margin: 0 8px 0 0;        /* small right gap between checkbox and label text */
+  vertical-align: middle;   /* align checkbox with text baseline */
 }
 
-/* Styling for buttons */
+/* Button appearance */
 button {
-  background: #0078ff; /* blue background */
-  color: white; /* white text */
-  border: none; /* no border */
-  cursor: pointer; /* changes to pointer cursor on hover */
+  background: #0078ff;      /* blue background color */
+  color: white;             /* white text color */
+  border: none;             /* remove default button border */
+  cursor: pointer;          /* pointer cursor indicates clickable element */
+  border-radius: 6px;       /* slightly rounded corners */
 }
 
+/* Button hover state for user feedback */
 button:hover {
-  background: #005fcc; /* darker blue on hover */
+  background: #005fcc;      /* darker blue on hover */
 }
