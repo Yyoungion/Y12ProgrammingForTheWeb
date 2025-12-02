@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+
+    <style>
+        /* Reset + base styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #6e7dff, #8e4ae6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .form-container {
+            background: #fff;
+            width: 90%;
+            max-width: 420px;
+            padding: 30px 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            animation: fadeIn 0.6s ease;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #2c3e50;
+        }
+
+        #result p {
+            background: #f7f9fc;
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+            border: 1px solid #e1e6ef;
+        }
+
+        button {
+            background: #4b79a1;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background: #3a5f7d;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(15px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registration Successful!</h2>
+        <div id="result"></div>
+
+        <button onclick="goBack()">Back to Registration</button>
+    </div>
+
+    <script>
+        // Retrieve data from sessionStorage
+        const registrationData = JSON.parse(sessionStorage.getItem('registrationData'));
+
+        if (registrationData) {
+            document.getElementById('result').innerHTML = `
+                <p><strong>Name:</strong> ${registrationData.name}</p>
+                <p><strong>Email:</strong> ${registrationData.email}</p>
+                <p><strong>Date of Birth:</strong> ${registrationData.dob}</p>
+                <p><strong>Password:</strong> ${'*'.repeat(registrationData.password.length)}</p>
+            `;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
+uuu

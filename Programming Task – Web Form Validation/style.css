@@ -7,7 +7,7 @@ body {
   gap: 16px;                /* add 16px space between the heading and the form */
   min-height: 100vh;        /* make body at least full viewport height for vertical centering */
   margin: 0;                /* remove default page margin */
-  background: lightblue;      /* light gray background color */
+  background: linear-gradient(135deg, #6e7dff, #8e4ae6); /* gradient background */
   font-family: "Times New Roman", Times, serif;  /* serif font stack */
 }
 
