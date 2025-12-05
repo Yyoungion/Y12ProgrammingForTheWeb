@@ -11,7 +11,10 @@
             margin: 0;
             padding: 0;
             font-family: "Poppins", sans-serif;
-            background: linear-gradient(135deg, #6e7dff, #8e4ae6);
+            background: radial-gradient(circle at 20% 20%, #ff9a9e 0%, transparent 40%),
+                        radial-gradient(circle at 80% 30%, #fad0c4 0%, transparent 40%),
+                        radial-gradient(circle at 50% 80%, #a1c4fd 0%, transparent 40%),
+                #f7f7ff;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -19,7 +22,7 @@
             color: #333;
         }
 
-        .form-container {
+        .box {
             background: #fff;
             width: 90%;
             max-width: 420px;
@@ -71,7 +74,7 @@
 </head>
 <body>
 
-    <div class="form-container">
+    <div class="box">
         <h2>Registration Successful!</h2>
         <div id="result"></div>
 
@@ -87,7 +90,7 @@
                 <p><strong>Name:</strong> ${registrationData.name}</p>
                 <p><strong>Email:</strong> ${registrationData.email}</p>
                 <p><strong>Date of Birth:</strong> ${registrationData.dob}</p>
-                <p><strong>Password:</strong> ${'*'.repeat(registrationData.password.length)}</p>
+                <p><strong>Password:</strong> ${registrationData.password}</p>
             `;
         }
 
@@ -98,4 +101,3 @@
 
 </body>
 </html>
-uuu

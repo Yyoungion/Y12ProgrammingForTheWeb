@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sign Up </title>
-  <!-- Link to stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="box">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" action="results.html" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-  <!-- Page heading -->
-  <h2>Registration Form</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-  <!-- Form with id "Login" — script.js uses this id to attach in script.js -->
-  <form id="Login">
-    <!-- Name input: required attribute prevents submission if empty in supported browsers -->
-    <label>Name:</label>
-    <input type="text" id="name" required>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
 
-    <!-- Email input: type="email" triggers browser email validation -->
-    <label>Email:</label>
-    <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-    <!-- Date input for DOB -->
-    <label>Date of Birth:</label>
-    <input type="date" id="dob" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
 
-    <!-- Password input -->
-    <label>Password:</label>
-    <input type="password" id="password" required>
+            <label for="show-password">
+                <input type="checkbox" id="show-password" name="show-password">
+                Show Password
+            </label>
 
-    <!-- Checkbox to toggle password visibility.
-         It calls togglePasswordVisibility() in script.js when clicked. -->
-    <label>Show Password</label>
-    <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
-
-    <!-- Submit button: type="submit triggers the submit event in script.js -->
-    <button type="submit">Register</button>
-  </form>
-
-  <!-- Include your JavaScript. script.js must exist and define togglePasswordVisibility()
-       and a submit handler for the form (using the form id "Login"). -->
-  <script src="script.js"></script>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

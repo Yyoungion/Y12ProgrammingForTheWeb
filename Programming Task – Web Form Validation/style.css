@@ -1,55 +1,96 @@
-/* Center the whole page content (horizontally + vertically) and keep the form as a bordered card */
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  display: flex;
-  flex-direction: column;   /* stack children vertically (h2 heading above the form) */
-  align-items: center;      /* horizontally center all child elements */
-  justify-content: center;  /* vertically center all child elements */
-  gap: 16px;                /* add 16px space between the heading and the form */
-  min-height: 100vh;        /* make body at least full viewport height for vertical centering */
-  margin: 0;                /* remove default page margin */
-  background: linear-gradient(135deg, #6e7dff, #8e4ae6); /* gradient background */
-  font-family: "Times New Roman", Times, serif;  /* serif font stack */
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at 20% 20%, #ff9a9e 0%, transparent 40%),
+                radial-gradient(circle at 80% 30%, #fad0c4 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, #a1c4fd 0%, transparent 40%),
+                #f7f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Card-style form centered on the page */
-form#Login {
-  width: 100%;
-  max-width: 500px;         /* limit form width so it doesn't stretch too wide */
-  padding: 24px;            /* inner spacing inside the form */
-  border: 2px solid #d6dbe0; /* visible gray border around the form */
-  border-radius: 10px;      /* rounded corners for a softer card look */
-  background: #ffffff;      /* white background for the form card */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);  /* subtle shadow for depth */
-  box-sizing: border-box;   /* include padding/border in width calculation */
-  text-align: left;         /* align labels and text to the left */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Make inputs and buttons full width inside the centered card */
-input:not([type="checkbox"]), button {
-  width: 100%;              /* stretch to fill the form width */
-  padding: 10px;            /* inner spacing for readability */
-  margin: 10px 0;           /* vertical spacing between controls */
-  box-sizing: border-box;   /* include padding in width calculation */
+body {
+    animation: fade-in 1s ease forwards;
+}
+.box {
+    animation: pop-up 0.5s ease forwards;
+}
+.box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-/* Keep checkboxes compact and inline with their label */
-input[type="checkbox"] {
-  width: auto;              /* don't stretch checkbox to full width */
-  padding: 0;               /* remove extra padding */
-  margin: 0 8px 0 0;        /* small right gap between checkbox and label text */
-  vertical-align: middle;   /* align checkbox with text baseline */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Button appearance */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #6e7dff;
+}
+
 button {
-  background: #0078ff;      /* blue background color */
-  color: white;             /* white text color */
-  border: none;             /* remove default button border */
-  cursor: pointer;          /* pointer cursor indicates clickable element */
-  border-radius: 6px;       /* slightly rounded corners */
+    padding: 12px;
+    background-color: #6e7dff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Button hover state for user feedback */
 button:hover {
-  background: #005fcc;      /* darker blue on hover */
+    background-color: #5a66cc;
+}
+
+input::placeholder {
+    color: #aaa;
 }
