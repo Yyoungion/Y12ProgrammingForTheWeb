@@ -6,7 +6,7 @@
     <title>Registration Successful</title>
 
     <style>
-        /* Reset + base styling */
+        /* Reset default margins and padding, set base font and background */
         body {
             margin: 0;
             padding: 0;
@@ -22,6 +22,7 @@
             color: #333;
         }
 
+        /* Center container with white background and shadow */
         .box {
             background: #fff;
             width: 90%;
@@ -33,12 +34,14 @@
             text-align: center;
         }
 
+        /* Heading styling */
         h2 {
             margin-bottom: 20px;
             font-size: 26px;
             color: #2c3e50;
         }
 
+        /* Result data display styling */
         #result p {
             background: #f7f9fc;
             padding: 12px 14px;
@@ -48,6 +51,7 @@
             border: 1px solid #e1e6ef;
         }
 
+        /* Back button styling */
         button {
             background: #4b79a1;
             color: white;
@@ -61,10 +65,12 @@
             transition: 0.2s ease;
         }
 
+        /* Button hover effect */
         button:hover {
             background: #3a5f7d;
         }
 
+        /* Fade-in animation for page load */
         @keyframes fadeIn {
             from {opacity: 0; transform: translateY(15px);}
             to {opacity: 1; transform: translateY(0);}
@@ -76,15 +82,18 @@
 
     <div class="box">
         <h2>Registration Successful!</h2>
+        <!-- Container for displaying registration data -->
         <div id="result"></div>
 
+        <!-- Button to navigate back to registration form -->
         <button onclick="goBack()">Back to Registration</button>
     </div>
 
     <script>
-        // Retrieve data from sessionStorage
+        // Retrieve registration data from sessionStorage (stored by script.js)
         const registrationData = JSON.parse(sessionStorage.getItem('registrationData'));
 
+        // Display registration data if it exists
         if (registrationData) {
             document.getElementById('result').innerHTML = `
                 <p><strong>Name:</strong> ${registrationData.name}</p>
@@ -94,6 +103,7 @@
             `;
         }
 
+        // Navigate back to previous page (registration form)
         function goBack() {
             window.history.back();
         }

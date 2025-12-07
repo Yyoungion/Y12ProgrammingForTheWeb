@@ -7,32 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Main container for the registration form -->
     <div class="box">
         <h2>Registration Form</h2>
+        
+        <!-- Registration form that submits to results.html -->
         <form id="registrationForm" action="results.html" method="POST">
+            <!-- Full Name input field -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- Email input field with built-in email validation -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
+            <!-- Date of Birth input field -->
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required>
 
+            <!-- Password input field (hidden by default) -->
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
+            <!-- Confirm Password input field for verification -->
             <label for="confirm-password">Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password" required>
 
+            <!-- Checkbox to toggle password visibility -->
             <label for="show-password">
                 <input type="checkbox" id="show-password" name="show-password">
                 Show Password
             </label>
 
+            <!-- Submit button to register -->
             <button type="submit">Register</button>
         </form>
     </div>
+
+    <!-- Link to external JavaScript for form validation and interactivity -->
     <script src="script.js"></script>
 </body>
 </html>
